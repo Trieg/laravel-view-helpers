@@ -75,10 +75,9 @@ By default method is interpreted as <a href="https://zaengle.com/blog/exploring-
 #### How can we call them helpers if they can not interact with regular data/objects/arrays ?
 They can, and here's how:
 
-Define annotation param @isDirective to false
+- Define annotation param @isDirective to false
 ```php
-    ....,
-        
+
     /**
     *
     * @isDirective = false
