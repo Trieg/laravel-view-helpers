@@ -1,0 +1,17 @@
+BuiltIn helpers
+
+	- baseurl
+	- currentroute
+
+	- javascripts capture
+		- scripts 
+		- files
+	- stylesheets capture
+		- styles
+		- files
+
+	- doctype
+	- headlink
+	- headmeta
+
+	- switch

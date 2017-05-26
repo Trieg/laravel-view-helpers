@@ -1,0 +1,23 @@
+{
+    "name": "cubes-doo/laravel-view-helpers",
+    "description": "Laravel view-blade helpers package.",
+    "type": "library",
+    "license": "GPL",
+    "keywords": ["laravel", "laravel view helpers", "laravel helpers", "laravel blade helpers", "laravel extension", "blade helpers"],
+    "homepage": "https://github.com/cubes-doo/laravel-view-helpers",
+    "authors": [
+        {
+            "name": "Djordje Stojiljkovic",
+            "email": "djordje.stojiljkovic@cubes.rs"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "laravel/framework": "5.1.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cubes\\View\\Helpers\\": "src/"
+        }
+    }
+}
