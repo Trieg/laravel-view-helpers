@@ -72,11 +72,13 @@ class Hello
 By default method is interpreted as <a href="https://zaengle.com/blog/exploring-laravels-custom-blade-directives" alt="Blade directive">Blade directive</a>.
 <br> So you cannot pass data/objects/arrays from view to method. Everything 'll be interpreted as string. <br>
 
-##### How can we call them helpers if they can not interact with regular data/objects/arrays ?
+#### How can we call them helpers if they can not interact with regular data/objects/arrays ?
 They can, and here's how:
+
+Define annotation param @isDirective to false
 ```php
-....
-    
+    ....,
+        
     /**
     *
     * @isDirective = false
@@ -90,7 +92,7 @@ They can, and here's how:
     }
 
 ```
-Define annotation param @isDirective to false
+
 ```blade 
    
    {{ $sayHelloToPeople($peopleObject) }}
