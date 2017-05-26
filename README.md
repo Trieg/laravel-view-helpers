@@ -3,6 +3,7 @@
 <p align="center"> <b>View Helpers</b> </p>
 
 <p align="center">
+<a href="https://cubes.rs/"><img src="https://badge.fury.io/gh/cubes-doo%2Flaravel-view-helpers.svg" alt="Version"></a>
 <a href="https://mit-license.org/"><img src="http://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square" alt="License"></a>
 </p>
 
