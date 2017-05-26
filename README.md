@@ -7,6 +7,8 @@
 <a href="https://mit-license.org/"><img src="http://img.shields.io/badge/license-MIT-ff69b4.svg?style=flat-square" alt="License"></a>
 </p>
 
+<hr>
+
 *Laravel view helpers package lets you use and create custom global view helpers and blade directives.*
 
 ## Installation
@@ -23,10 +25,10 @@ Cubes\View\Helpers\ViewHelperServiceProvider::class,
 ## Example
 Create app/Helpers directory or run command:
 ```php
-php artisan make:helper Hello {--dummy=true}
+php artisan make:helper Hello 
 ```
-* { HelperName } &nbsp; - Name of View Helper
-* { --dummy=true } - Generate dummy methods withing newly created helper
+* Hello   - Name of View Helper
+* --dummy=true - Generate dummy methods within newly created helper
 
 Command will create directory and Helper for you.
 
@@ -98,6 +100,12 @@ They can, and here's how:
    // outputs: Hello Nick, \n Hello George, \n Hello Sara
    
 ```
+
+#### Built-in helpers
+- <a>@javascripts()  &nbsp;@includeJs() &nbsp;&nbsp;&nbsp;@endjavascripts()</a>
+- <a>@stylesheets()  @includeCss() @endstylesheets()</a>
+- <a>@routeName() </a>
+
 
 ## Notes
 If you experience permission error while using commands make sure you grant permissions

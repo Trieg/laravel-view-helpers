@@ -218,6 +218,7 @@ class HelperResolver
     {
         if (file_exists($helperFile)) {
             $helperClass = $this->getClassFromFile($helperFile);
+            include_once($helperFile);
             if (class_exists($helperClass)) {
                 $reflectedObject = new \ReflectionClass($helperClass);
                 return $reflectedObject;

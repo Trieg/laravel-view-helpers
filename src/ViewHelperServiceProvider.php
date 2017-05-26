@@ -11,8 +11,8 @@
 namespace Cubes\View\Helpers;
 
 use Illuminate\Support\ServiceProvider;
-use View\Helpers\Console\Commands\HelperCommand;
-use View\Helpers\Helpers\HelperResolver;
+use Cubes\View\Helpers\Console\Commands\HelperCommand;
+use Cubes\View\Helpers\Helpers\HelperResolver;
 
 class ViewHelperServiceProvider extends ServiceProvider
 {

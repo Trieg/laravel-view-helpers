@@ -12,7 +12,7 @@ namespace Cubes\View\Helpers\Registry\Holders;
 
 use Illuminate\View\Compilers\Concerns\CompilesStacks;
 
-class StyleHolder extends HolderInterface
+class StyleHolder implements HolderInterface
 {
     use CompilesStacks;
 
@@ -28,7 +28,7 @@ class StyleHolder extends HolderInterface
      *
      * @var string
      */
-    protected $styleHolder = '<link rel="stylesheet" href="@path">';
+    protected $styleHolder = '<link rel="stylesheet" href="{{ asset(@path) }}">';
 
     /**
      * Default inline script html element sames as for scriptHolder.
@@ -46,7 +46,7 @@ class StyleHolder extends HolderInterface
     public function defineStackHolder($name)
     {
         if (empty($this->stackHolder)) {
-            $this->stackHolder = $name;
+            $this->stackHolder = "('{$name}')";
         }
     }
 }
