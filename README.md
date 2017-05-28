@@ -28,7 +28,6 @@ Create app/Helpers directory or run command:
 php artisan make:helper Hello 
 ```
 * Hello   - Name of View Helper
-* --dummy=true - Generate dummy methods within newly created helper
 
 Command will create directory and Helper for you.
 

@@ -8,7 +8,7 @@
  * @author  Djordje Stojiljkovic <djordje.stojiljkovic@cubes.rs>
  *
  */
-namespace Cubes\View\Helpers\Registry\Cache;
+namespace Cubes\View\Helpers\Factory\Cache;
 
 
 class CacheManager

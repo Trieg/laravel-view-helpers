@@ -20,7 +20,7 @@ class HelperCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:helper {name} {--dummy=} ';
+    protected $signature = 'make:helper {name} ';
 
     /**
      * The console command description.
@@ -38,12 +38,12 @@ class HelperCommand extends Command
     {
         // Get arguments
         $helperName = $this->argument('name');
-        $dummyData  = $this->option('dummy');
         $answer     = $this->confirm(
             'Helper with name ' . ucfirst($helperName) . ' will be created. Continue [y|n]?'
         );
 
         if ($answer === true) {
+
             $config     = app()->make('config');
             $helpersDir = app_path()  . '/' . $config->get('helpers.directory', 'Helpers');
             $helperPath = $helpersDir . '/' . ucfirst($helperName) . '.php';
@@ -53,37 +53,25 @@ class HelperCommand extends Command
                 exit();
             }
 
+            // Check if directory exist if not create it
             if (!file_exists($helpersDir)) {
                 mkdir($helpersDir, 0777, true);
             }
 
             if ($this->isWritable($helpersDir) === true) {
-
                 // show some animated progress
                 $this->showProgress();
 
-                // if dummy data is triggered
-                if ($dummyData == true) {
-                    $helperClassPlaceholder = str_replace(
-                        'Placeholder',
+                $fp = fopen($helperPath, "wb");
+                fwrite(
+                    $fp,
+                    str_replace(
+                        'PlaceholderEmpty',
                         ucfirst($helperName),
-                        file_get_contents(__DIR__.'/../../Resources/Placeholder.php')
-                    );
-                    $fp = fopen($helperPath, "wb");
-                    fwrite($fp, $helperClassPlaceholder);
-                    fclose($fp);
-                    $this->info('Dummy methods extracted successfully.');
-                } else {
-                    $fp = fopen($helperPath, "wb");
-                    fwrite(
-                        $fp,
-                        str_replace(
-                            'PlaceholderEmpty',
-                            ucfirst($helperName),
-                            file_get_contents(__DIR__ . '/../../Resources/PlaceholderEmpty.php')
-                        )
-                    );
-                }
+                        file_get_contents(__DIR__.'/../../resources/helper-class-placeholder.stub')
+                    )
+                );
+
                 $this->info('Helper class: ' . ucfirst($helperName) . ' created successfully. Happy coding!' );
             }
 

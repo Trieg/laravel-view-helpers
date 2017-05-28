@@ -8,9 +8,9 @@
  * @author  Djordje Stojiljkovic <djordje.stojiljkovic@cubes.rs>
  *
  */
-namespace Cubes\View\Helpers\Registry;
+namespace Cubes\View\Helpers\Helpers\Factory;
 
-use Cubes\View\Helpers\Registry\Holders\StyleHolder;
+use Cubes\View\Helpers\Helpers\Factory\Holders\StyleHolder;
 
 class Stylesheets extends StyleHolder
 {

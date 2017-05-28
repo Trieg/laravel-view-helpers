@@ -8,7 +8,7 @@
  * @author  Djordje Stojiljkovic <djordje.stojiljkovic@cubes.rs>
  *
  */
-namespace Cubes\View\Helpers\Exceptions;
+namespace Cubes\View\Helpers\Helpers\Exceptions;
 
 use Throwable;
 

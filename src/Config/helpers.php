@@ -11,7 +11,10 @@
     |
     */
     'package_helpers' => [
-        View\Helpers\Registry\Javascripts::class,
+
+        Cubes\View\Helpers\Helpers\Factory\Javascripts::class,
+        Cubes\View\Helpers\Helpers\Factory\Stylesheets::class,
+
     ],
 
     /*

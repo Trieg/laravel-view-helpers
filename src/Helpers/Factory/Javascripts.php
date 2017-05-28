@@ -8,9 +8,10 @@
  * @author  Djordje Stojiljkovic <djordje.stojiljkovic@cubes.rs>
  *
  */
-namespace Cubes\View\Helpers\Registry;
+namespace Cubes\View\Helpers\Helpers\Factory;
 
-use Cubes\View\Helpers\Registry\Holders\ScriptHolder;
+
+use Cubes\View\Helpers\Helpers\Factory\Holders\ScriptHolder;
 
 class Javascripts extends ScriptHolder
 {

@@ -8,7 +8,7 @@
  * @author  Djordje Stojiljkovic <djordje.stojiljkovic@cubes.rs>
  *
  */
-namespace Cubes\View\Helpers\Registry\Holders;
+namespace Cubes\View\Helpers\Helpers\Factory\Holders;
 
 use Illuminate\View\Compilers\Concerns\CompilesStacks;
 
