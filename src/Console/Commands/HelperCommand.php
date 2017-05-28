@@ -66,7 +66,7 @@ class HelperCommand extends Command
                 fwrite(
                     $fp,
                     str_replace(
-                        'PlaceholderEmpty',
+                        'ClassName',
                         ucfirst($helperName),
                         file_get_contents(__DIR__.'/../../resources/helper-class-placeholder.stub')
                     )
